@@ -34,11 +34,11 @@ public class Teacher extends Human {
             throw new NoStudentException("Teacher " + getName() + " , you can only report students as sick");
         }
 
-        if (human.isZiek()) {
+        if (human.isSick()) {
             System.out.println(getName() + ": " + human.getName() + " is already reported as sick");
             return false;
         }
-        human.setZiek(true);
+        human.setSick(true);
         System.out.println(getName() + ": " + human.getName() + " has reported sick");
         return true;
     }

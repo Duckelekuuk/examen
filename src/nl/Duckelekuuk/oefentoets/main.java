@@ -19,6 +19,7 @@ public class main {
         try {
             teacher_1.reportSick(mezelf);
             teacher_2.reportSick(mezelf);
+
             teacher_1.reportSick(teacher_2);
         }catch (Exception e) {
             e.printStackTrace();

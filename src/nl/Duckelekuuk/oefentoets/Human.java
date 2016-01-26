@@ -1,8 +1,5 @@
 package nl.Duckelekuuk.oefentoets;
 
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.time.Year;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -14,12 +11,12 @@ public class Human {
 
     private String name;
     private Date dateOfBirth;
-    private boolean ziek;
+    private boolean sick;
 
     public Human(String name, Date dateOfBirth) {
         this.name = name;
         this.dateOfBirth = dateOfBirth;
-        this.ziek = false;
+        this.sick = false;
     }
 
     public String getName() {
@@ -38,15 +35,15 @@ public class Human {
         this.dateOfBirth = dateOfBirth;
     }
 
-    public boolean isZiek() {
-        return ziek;
+    public boolean isSick() {
+        return sick;
     }
 
-    public void setZiek(boolean ziek) {
-        this.ziek = ziek;
+    public void setSick(boolean ziek) {
+        this.sick = ziek;
     }
 
-    public int leeftijd() {
+    public int age() {
         Calendar calendar = Calendar.getInstance();
         calendar.setTime(dateOfBirth);
         Calendar today = Calendar.getInstance();
@@ -57,6 +54,6 @@ public class Human {
     }
 
     public String toString() {
-        return name + ", " + leeftijd();
+        return name + ", " + age();
     }
 }
